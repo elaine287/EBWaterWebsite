@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+    <!-- Water Drop Base -->
+    <path d="M50 5 C50 5, 10 40, 10 70 C10 92, 28 100, 50 100 C72 100, 90 92, 90 70 C90 40, 50 5, 50 5 Z" fill="#007080" />
+    
+    <!-- Top left jigsaw piece (Mint) -->
+    <path d="M50 5 C50 5, 10 40, 10 70 C10 80, 15 88, 25 93 L 50 50 Z" fill="#70C0A0" />
+    
+    <!-- Puzzle lines -->
+    <path d="M25 60 A 8 8 0 1 1 25 76" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+    <path d="M75 60 A 8 8 0 1 0 75 76" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+    <path d="M42 35 A 8 8 0 1 1 58 35" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+    
+    <!-- Divider lines -->
+    <line x1="50" y1="5" x2="50" y2="100" stroke="#FFFFFF" stroke-width="3" />
+    <path d="M10 70 Q 50 40 90 70" stroke="#FFFFFF" stroke-width="3" fill="none" />
+</svg>

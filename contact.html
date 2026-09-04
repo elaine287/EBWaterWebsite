@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | EBWater</title>
+    <meta name="description" content="Get in touch with EBWater for independent water safety advice and governance support.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .contact-info-card {
+            background: var(--color-navy);
+            color: var(--color-white);
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius);
+            height: 100%;
+        }
+        .contact-info-card a {
+            color: var(--color-mint);
+        }
+        .contact-info-card a:hover {
+            color: var(--color-white);
+        }
+        .contact-icon-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .contact-icon-row svg {
+            width: 24px;
+            height: 24px;
+            color: var(--color-mint);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/EBWaterLogoSquare.jpg" alt="EBWater Logo" class="logo-icon">
+                <div class="logo-text-wrapper">
+                    <span class="logo-title">EBWater</span>
+                    <span class="logo-subtitle">Water Safety & Biological Risk Consultants</span>
+                </div>
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle Navigation" aria-expanded="false">
+                ☰
+            </button>
+            
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html" class="active">Contact</a>
+                <a href="consultation.html" class="btn">Request a Consultation</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container reveal">
+            <h1>LET'S TALK ABOUT WATER SAFETY</h1>
+            <p>Whether you need specialist advice, an independent assessment or support with water safety governance, get in touch with EBWater to discuss your requirements.</p>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="section section-bg-light">
+        <div class="container">
+            <div class="grid-2" style="gap: var(--spacing-lg);">
+                
+                <!-- Contact Info -->
+                <div class="reveal">
+                    <div class="contact-info-card">
+                        <h3 style="color: var(--color-white); margin-bottom: 2rem;">Contact Information</h3>
+                        
+                        <div class="contact-icon-row">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <div>
+                                <span style="display: block; font-size: 0.85rem; color: var(--color-neutral-2);">Email</span>
+                                <a href="mailto:elaine@ebwater.co.uk" style="font-size: 1.1rem;">elaine@ebwater.co.uk</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-icon-row">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                            <div>
+                                <span style="display: block; font-size: 0.85rem; color: var(--color-neutral-2);">Website</span>
+                                <a href="https://www.ebwater.co.uk" style="font-size: 1.1rem;">www.ebwater.co.uk</a>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 3rem;">
+                            <p style="color: var(--color-neutral-2);">For specific assessments or structural audits, please use our dedicated consultation request form.</p>
+                            <a href="consultation.html" class="btn" style="background: var(--color-white); color: var(--color-navy); margin-top: 1rem;">Request Consultation</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="reveal">
+                    <div style="background: var(--color-white); padding: var(--spacing-lg); border-radius: var(--border-radius); box-shadow: var(--shadow-subtle);">
+                        <h3 style="margin-bottom: 1.5rem;">Send an Enquiry</h3>
+                        <form action="#" method="POST" id="contactForm">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Name *</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="organisation" class="form-label">Organisation</label>
+                                <input type="text" id="organisation" name="organisation" class="form-control">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone</label>
+                                <input type="tel" id="phone" name="phone" class="form-control">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="enquiry" class="form-label">Enquiry Type</label>
+                                <select id="enquiry" name="enquiry" class="form-control">
+                                    <option value="">Select an option...</option>
+                                    <option value="audit">Biological Risk Audit</option>
+                                    <option value="wsp">Water Safety Plan</option>
+                                    <option value="ae">Authorising Engineer Services</option>
+                                    <option value="training">Training</option>
+                                    <option value="bottom_business">Bottom Business</option>
+                                    <option value="other">Other Enquiry</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea id="message" name="message" class="form-control" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn" style="width: 100%; margin-top: 1rem;">Send Enquiry</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" style="margin-bottom: 1rem; filter: brightness(0) invert(1);">
+                        <img src="assets/images/EBWaterLogoSquare.jpg" alt="EBWater Logo" class="logo-icon" style="opacity: 0.9;">
+                        <div class="logo-text-wrapper">
+                            <span class="logo-title">EBWater</span>
+                            <span class="logo-subtitle" style="color: #ccc;">Water Safety & Biological Risk Consultants</span>
+                        </div>
+                    </a>
+                    <p style="color: var(--color-neutral-2); font-size: 0.9rem;">
+                        Independent water safety governance and specialist biological risk consultancy for healthcare premises.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Biological Risk Audits</a></li>
+                        <li><a href="services.html">Water Safety Plans</a></li>
+                        <li><a href="services.html">Authorising Engineer Services</a></li>
+                        <li><a href="services.html">Training</a></li>
+                        <li><a href="services.html">Governance</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:elaine@ebwater.co.uk">elaine@ebwater.co.uk</a></li>
+                        <li><a href="https://www.ebwater.co.uk">www.ebwater.co.uk</a></li>
+                    </ul>
+                    <a href="consultation.html" class="btn" style="margin-top: 1rem; width: 100%;">Request Consultation</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EBWater. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerText;
+            submitBtn.innerText = 'Sending...';
+            submitBtn.disabled = true;
+
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch('/api/submit-enquiry', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                alert(result.message);
+                if (result.success) this.reset();
+            } catch (error) {
+                alert('An error occurred. Please try again.');
+            } finally {
+                submitBtn.innerText = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
