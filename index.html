@@ -18,57 +18,41 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
         }
         .container {
-            max-width: 600px;
-            padding: 40px;
+            max-width: 640px;
+            width: 100%;
+            padding: 48px 36px;
             background: #FFFFFF;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(26, 58, 90, 0.05);
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(26, 58, 90, 0.07);
             border-top: 4px solid #007080;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .logo {
-            width: 120px;
-            height: 120px;
-            margin-bottom: 24px;
+        .hero-logo {
+            width: 100%;
+            max-width: 520px;
+            height: auto;
+            display: block;
+            margin-bottom: 20px;
         }
         h1 {
-            font-weight: 800;
-            margin: 0 0 16px 0;
-            font-size: 2rem;
-        }
-        p {
-            color: #52616B;
-            line-height: 1.6;
-            margin-bottom: 32px;
-        }
-        .contact-info {
-            background: #F7FAFA;
-            padding: 16px;
-            border-radius: 8px;
-            border: 1px solid #E7EEEE;
-            font-size: 0.95rem;
-        }
-        a {
-            color: #007080;
-            text-decoration: none;
             font-weight: 600;
-        }
-        a:hover {
-            text-decoration: underline;
+            margin: 0;
+            font-size: 1.5rem;
+            color: #1A3A5A;
+            letter-spacing: 0.5px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="assets/images/EBWaterLogoSquare.jpg" alt="EBWater Logo" class="logo">
-        <h1>Website Coming Soon</h1>
-        <p>We are currently updating our website to bring you a better experience. Independent water safety governance and specialist biological risk consultancy for healthcare premises.</p>
-        
-        <div class="contact-info">
-            <strong>For immediate enquiries, please contact:</strong><br><br>
-            Elaine | <a href="mailto:elaine@ebwater.co.uk">elaine@ebwater.co.uk</a>
-        </div>
+        <img src="EBWaterLogo.jpg" alt="EBWater Logo" class="hero-logo">
+        <h1>Website coming soon</h1>
     </div>
 </body>
 </html>
