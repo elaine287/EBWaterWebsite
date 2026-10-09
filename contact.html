@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | EBWater</title>
-    <meta name="description" content="Get in touch with EBWater for independent water safety advice and governance support.">
+    <title>Contact & Request a Consultation | EBWater</title>
+    <meta name="description" content="Get in touch with EBWater for independent water safety advice, governance support, or to request a consultation for your healthcare premises.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,6 +35,32 @@
             width: 24px;
             height: 24px;
             color: var(--color-mint);
+            flex-shrink: 0;
+        }
+        .next-steps {
+            margin-top: 2rem;
+        }
+        .next-steps ol {
+            padding-left: 1rem;
+            color: var(--color-neutral-2);
+            line-height: 1.8;
+        }
+        .next-steps h4 {
+            color: var(--color-mint);
+            margin-bottom: 0.75rem;
+        }
+        .quote-block {
+            margin-top: 2rem;
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--color-mint);
+            background: rgba(255,255,255,0.05);
+        }
+        .quote-block p {
+            margin: 0;
+            font-weight: 500;
+            color: var(--color-neutral-2);
+            font-style: italic;
         }
     </style>
 </head>
@@ -44,42 +70,38 @@
     <header class="site-header">
         <div class="header-container">
             <a href="index.html" class="logo">
-                <img src="assets/images/EBWaterLogoSquare.jpg" alt="EBWater Logo" class="logo-icon">
+                <img src="LogoMainNoText.jpg" alt="EBWater Logo" class="logo-icon">
                 <div class="logo-text-wrapper">
                     <span class="logo-title">EBWater</span>
-                    <span class="logo-subtitle">Water Safety & Biological Risk Consultants</span>
+                    <span class="logo-subtitle">Healthcare water safety advice</span>
                 </div>
             </a>
             
-            <button class="mobile-menu-btn" aria-label="Toggle Navigation" aria-expanded="false">
-                â˜°
-            </button>
+            <button class="mobile-menu-btn" aria-label="Toggle Navigation" aria-expanded="false">&#9776;</button>
             
             <nav class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="services.html">Services</a>
-                <a href="blog.html">Blog</a>
-                <a href="contact.html" class="active">Contact</a>
                 <a href="consultation.html" class="btn">Request a Consultation</a>
             </nav>
         </div>
     </header>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header" style="background-color: var(--color-teal);">
         <div class="container reveal">
-            <h1>LET'S TALK ABOUT WATER SAFETY</h1>
-            <p>Whether you need specialist advice, an independent assessment or support with water safety governance, get in touch with EBWater to discuss your requirements.</p>
+            <h1>GET IN TOUCH</h1>
+            <p>Contact EBWater for independent water safety advice or to request a consultation for your healthcare premises.</p>
         </div>
     </section>
 
     <!-- Content -->
     <section class="section section-bg-light">
         <div class="container">
-            <div class="grid-2" style="gap: var(--spacing-lg);">
+            <div class="grid-2" style="gap: var(--spacing-lg); align-items: start;">
                 
-                <!-- Contact Info -->
+                <!-- Left: Contact Info -->
                 <div class="reveal">
                     <div class="contact-info-card">
                         <h3 style="color: var(--color-white); margin-bottom: 2rem;">Contact Information</h3>
@@ -97,6 +119,16 @@
 
                         <div class="contact-icon-row">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <div>
+                                <span style="display: block; font-size: 0.85rem; color: var(--color-neutral-2);">Phone</span>
+                                <a href="tel:+447469509091" style="font-size: 1.1rem;">07469 509091</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-icon-row">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <circle cx="12" cy="12" r="10"></circle>
                                 <line x1="2" y1="12" x2="22" y2="12"></line>
                                 <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
@@ -107,54 +139,76 @@
                             </div>
                         </div>
 
-                        <div style="margin-top: 3rem;">
-                            <p style="color: var(--color-neutral-2);">For specific assessments or structural audits, please use our dedicated consultation request form.</p>
-                            <a href="consultation.html" class="btn" style="background: var(--color-white); color: var(--color-navy); margin-top: 1rem;">Request Consultation</a>
+                        <div class="next-steps">
+                            <h4>What happens next?</h4>
+                            <ol>
+                                <li>We review your requirements and ensure they align with our specialist capabilities.</li>
+                                <li>We arrange an initial confidential discussion to explore the scope.</li>
+                                <li>We outline how our independent governance or audit services can add value.</li>
+                            </ol>
+                        </div>
+
+                        <div class="quote-block">
+                            <p>"Independent advice is critical for robust Water Safety Group governance."</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Contact Form -->
+                <!-- Right: Merged Form -->
                 <div class="reveal">
                     <div style="background: var(--color-white); padding: var(--spacing-lg); border-radius: var(--border-radius); box-shadow: var(--shadow-subtle);">
-                        <h3 style="margin-bottom: 1.5rem;">Send an Enquiry</h3>
+                        <h3 style="margin-bottom: 0.5rem;">Send an Enquiry or Request a Consultation</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Fill in as much detail as you can — the more context you provide, the better we can tailor our response.</p>
+
                         <form action="#" method="POST" id="contactForm">
-                            <div class="form-group">
-                                <label for="name" class="form-label">Name *</label>
-                                <input type="text" id="name" name="name" class="form-control" required>
+                            <div class="grid-2" style="gap: 1rem;">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">Name *</label>
+                                    <input type="text" id="name" name="name" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="organisation" class="form-label">Organisation</label>
+                                    <input type="text" id="organisation" name="organisation" class="form-control">
+                                </div>
                             </div>
                             
-                            <div class="form-group">
-                                <label for="organisation" class="form-label">Organisation</label>
-                                <input type="text" id="organisation" name="organisation" class="form-control">
+                            <div class="grid-2" style="gap: 1rem;">
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email *</label>
+                                    <input type="email" id="email" name="email" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Phone</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control">
+                                </div>
                             </div>
-                            
+
                             <div class="form-group">
-                                <label for="email" class="form-label">Email *</label>
-                                <input type="email" id="email" name="email" class="form-control" required>
+                                <label for="role" class="form-label">Role / Position</label>
+                                <input type="text" id="role" name="role" class="form-control">
                             </div>
-                            
+
                             <div class="form-group">
-                                <label for="phone" class="form-label">Phone</label>
-                                <input type="tel" id="phone" name="phone" class="form-control">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="enquiry" class="form-label">Enquiry Type</label>
-                                <select id="enquiry" name="enquiry" class="form-control">
-                                    <option value="">Select an option...</option>
-                                    <option value="audit">Biological Risk Audit</option>
-                                    <option value="wsp">Water Safety Plan</option>
+                                <label for="service" class="form-label">Nature of Enquiry</label>
+                                <select id="service" name="service" class="form-control">
+                                    <option value="">Please select (optional)...</option>
+                                    <option value="audit">Risk Audit</option>
+                                    <option value="wsp">Water Safety Plan Development</option>
                                     <option value="ae">Authorising Engineer Services</option>
+                                    <option value="governance">Water Safety Governance</option>
                                     <option value="training">Training</option>
-                                    <option value="bottom_business">Bottom Business</option>
-                                    <option value="other">Other Enquiry</option>
+                                    <option value="other">General Enquiry / Other</option>
                                 </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="premises" class="form-label">Premises Type</label>
+                                <input type="text" id="premises" name="premises" class="form-control" placeholder="e.g. Acute Hospital, Care Home, NHS Trust">
                             </div>
                             
                             <div class="form-group">
                                 <label for="message" class="form-label">Message *</label>
-                                <textarea id="message" name="message" class="form-control" required></textarea>
+                                <textarea id="message" name="message" class="form-control" placeholder="Briefly describe your requirements or current challenges..." required></textarea>
                             </div>
                             
                             <button type="submit" class="btn" style="width: 100%; margin-top: 1rem;">Send Enquiry</button>
@@ -171,15 +225,15 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="index.html" class="logo" style="margin-bottom: 1rem; filter: brightness(0) invert(1);">
-                        <img src="assets/images/EBWaterLogoSquare.jpg" alt="EBWater Logo" class="logo-icon" style="opacity: 0.9;">
+                    <a href="index.html" class="logo" style="margin-bottom: 1rem;">
+                        <img src="LogoMainNoText.jpg" alt="EBWater Logo" class="logo-icon" style="border-radius: 12px; box-shadow: 3px 3px 10px rgba(0,0,0,0.6), -2px -2px 6px rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.1);">
                         <div class="logo-text-wrapper">
                             <span class="logo-title">EBWater</span>
-                            <span class="logo-subtitle" style="color: #ccc;">Water Safety & Biological Risk Consultants</span>
+                            <span class="logo-subtitle" style="color: #ccc;">Healthcare water safety advice</span>
                         </div>
                     </a>
                     <p style="color: var(--color-neutral-2); font-size: 0.9rem;">
-                        Independent water safety governance and specialist biological risk consultancy for healthcare premises.
+                        Independent water safety governance and specialist risk consultancy for healthcare premises.
                     </p>
                 </div>
                 <div>
@@ -188,35 +242,24 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="services.html">Services</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="footer-heading">Services</h4>
                     <ul class="footer-links">
-                        <li><a href="services.html">Biological Risk Audits</a></li>
+                        <li><a href="services.html">Risk Audits</a></li>
                         <li><a href="services.html">Water Safety Plans</a></li>
                         <li><a href="services.html">Authorising Engineer Services</a></li>
                         <li><a href="services.html">Training</a></li>
                         <li><a href="services.html">Governance</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h4 class="footer-heading">Contact</h4>
-                    <ul class="footer-links">
-                        <li><a href="mailto:elaine@ebwater.co.uk">elaine@ebwater.co.uk</a></li>
-                        <li><a href="https://www.ebwater.co.uk">www.ebwater.co.uk</a></li>
-                    </ul>
-                    <a href="consultation.html" class="btn" style="margin-top: 1rem; width: 100%;">Request Consultation</a>
                 </div>
-            </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 EBWater. All rights reserved.</p>
-                <div class="footer-bottom-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms</a>
-                </div>
+                
             </div>
         </div>
     </footer>
@@ -234,7 +277,7 @@
             const data = Object.fromEntries(formData.entries());
 
             try {
-                const response = await fetch('/api/submit-enquiry', {
+                const response = await fetch('/api/submit-consultation', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data)
@@ -253,3 +296,12 @@
     </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+

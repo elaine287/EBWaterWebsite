@@ -398,7 +398,7 @@ p {
 .page-header {
     background-color: var(--color-navy);
     color: var(--color-white);
-    padding: var(--spacing-xl) 0;
+    padding: 4.2rem 0;
     text-align: center;
 }
 
@@ -456,7 +456,7 @@ textarea.form-control {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
     gap: var(--spacing-lg);
     margin-bottom: var(--spacing-lg);
 }
@@ -569,3 +569,5 @@ textarea.form-control {
         transition: none !important;
     }
 }
+
+
