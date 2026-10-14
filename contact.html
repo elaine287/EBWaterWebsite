@@ -143,7 +143,11 @@
                         <h3 style="margin-bottom: 0.5rem;">Send an Enquiry or Request a Consultation</h3>
                         <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Fill in as much detail as you can — the more context you provide, the better we can tailor our response.</p>
 
-                        <form action="#" method="POST" id="contactForm">
+                        <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+                            <input type="hidden" name="access_key" value="82c4b28c-262d-465f-8fa1-db9730520764">
+                            <input type="hidden" name="subject" value="New EBWater Website Enquiry">
+                            <input type="hidden" name="from_name" value="EBWater Website">
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                             <div class="grid-2" style="gap: 1rem;">
                                 <div class="form-group">
                                     <label for="name" class="form-label">Name *</label>
@@ -249,6 +253,7 @@
     </footer>
 
     <script src="js/main.js"></script>
+
     <script>
         document.getElementById('contactForm').addEventListener('submit', async function(e) {
             e.preventDefault();
@@ -258,20 +263,28 @@
             submitBtn.disabled = true;
 
             const formData = new FormData(this);
-            const data = Object.fromEntries(formData.entries());
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
 
             try {
-                const response = await fetch('/api/submit-consultation', {
+                const response = await fetch('https://api.web3forms.com/submit', {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
                 });
                 
                 const result = await response.json();
-                alert(result.message);
-                if (result.success) this.reset();
+                if (response.status === 200 && result.success) {
+                    alert('Thank you! Your enquiry has been sent successfully. We will be in touch shortly.');
+                    this.reset();
+                } else {
+                    alert(result.message || 'Something went wrong. Please try again.');
+                }
             } catch (error) {
-                alert('An error occurred. Please try again.');
+                alert('An error occurred. Please try again or email us directly at elaine@ebwater.co.uk.');
             } finally {
                 submitBtn.innerText = originalText;
                 submitBtn.disabled = false;
@@ -280,12 +293,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
