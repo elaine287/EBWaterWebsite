@@ -3,51 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EBWater | Coming Soon</title>
+    <title>EBWater | Independent Water Safety Governance</title>
+    <meta name="description" content="EBWater provides independent water safety governance, risk assessments, Water Safety Plan development and specialist consultancy for healthcare premises.">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            background-color: #EEF5F5;
-            color: #1A3A5A;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        .container {
-            max-width: 640px;
-            width: 100%;
-            padding: 48px 36px;
-            background: #FFFFFF;
-            border-radius: 16px;
-            box-shadow: 0 8px 30px rgba(26, 58, 90, 0.07);
-            border-top: 4px solid #007080;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        h1 {
-            font-weight: 600;
-            margin: 0;
-            font-size: 1.5rem;
-            color: #1A3A5A;
-            letter-spacing: 0.5px;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Website coming soon</h1>
-    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="LogoMainNoText.jpg" alt="EBWater Logo" class="logo-icon">
+                <div class="logo-text-wrapper">
+                    <span class="logo-title">EBWater</span>
+                    <span class="logo-subtitle">Healthcare water safety advice</span>
+                </div>
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle Navigation" aria-expanded="false">&#9776;</button>
+            
+            <nav class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="consultation.html" class="btn">Request a Consultation</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content reveal">
+                <h1 class="hero-title">INDEPENDENT WATER SAFETY ADVICE FOR HEALTHCARE PREMISES.</h1>
+                <p class="hero-text">Specialist water safety governance, risk assessment and expert consultancy for healthcare premises.</p>
+                <div class="hero-actions">
+                    <a href="consultation.html" class="btn">Request a Consultation</a>
+                    <a href="services.html" class="btn btn-secondary">Explore Our Services</a>
+                </div>
+            </div>
+            <div class="hero-visual reveal" style="transition-delay: 0.2s;">
+                <div class="hero-image-wrapper" style="display: flex; justify-content: center; align-items: center; height: 100%;">
+                    <img src="LogoMain.jpg" alt="EBWater Logo" style="max-width: 80%; max-height: 80%; border-radius: 8px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" style="margin-bottom: 1rem;">
+                        <img src="LogoMainNoText.jpg" alt="EBWater Logo" class="logo-icon" style="border-radius: 12px; box-shadow: 3px 3px 10px rgba(0,0,0,0.6), -2px -2px 6px rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.1);">
+                        <div class="logo-text-wrapper">
+                            <span class="logo-title">EBWater</span>
+                            <span class="logo-subtitle" style="color: #ccc;">Healthcare water safety advice</span>
+                        </div>
+                    </a>
+                    <p style="color: var(--color-neutral-2); font-size: 0.9rem;">
+                        Independent water safety advice for healthcare premises.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Risk Assessment</a></li>
+                        <li><a href="services.html">Audit</a></li>
+                        <li><a href="services.html">Water Safety Plans</a></li>
+                        <li><a href="services.html">Training</a></li>
+                        <li><a href="services.html">Governance</a></li>
+                        <li><a href="services.html">Outbreak Support</a></li>
+                    </ul>
+                </div>
+                </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EBWater. All rights reserved.</p>
+                
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
 
 
 
