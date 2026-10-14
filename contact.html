@@ -49,6 +49,119 @@
             color: var(--color-mint);
             margin-bottom: 0.75rem;
         }
+
+        /* Success Modal Popup */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(26, 58, 90, 0.65);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-card {
+            background: var(--color-white);
+            border-radius: 16px;
+            max-width: 480px;
+            width: 100%;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(26, 58, 90, 0.25);
+            transform: scale(0.9) translateY(20px);
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            border-top: 5px solid var(--color-teal);
+        }
+
+        .modal-overlay.active .modal-card {
+            transform: scale(1) translateY(0);
+        }
+
+        .modal-icon-wrapper {
+            width: 68px;
+            height: 68px;
+            border-radius: 50%;
+            background: rgba(112, 192, 160, 0.2);
+            color: var(--color-teal);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+        }
+
+        .modal-icon-wrapper svg {
+            width: 36px;
+            height: 36px;
+            stroke-width: 2.5;
+        }
+
+        .modal-title {
+            color: var(--color-navy);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 0 0.75rem 0;
+        }
+
+        .modal-message {
+            color: var(--color-text-light);
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin: 0 0 1.75rem 0;
+        }
+
+        .modal-close-btn {
+            background: var(--color-teal);
+            color: var(--color-white);
+            border: none;
+            padding: 0.85rem 2.5rem;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-standard);
+            font-family: inherit;
+        }
+
+        .modal-close-btn:hover {
+            background: var(--color-navy);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .modal-x-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1.25rem;
+            background: none;
+            border: none;
+            font-size: 1.75rem;
+            color: var(--color-text-light);
+            cursor: pointer;
+            line-height: 1;
+            padding: 0.25rem;
+            transition: var(--transition-standard);
+        }
+
+        .modal-x-btn:hover {
+            color: var(--color-navy);
+            transform: scale(1.15);
+        }
     </style>
 </head>
 <body>
@@ -253,14 +366,51 @@
     </footer>
 
     <script src="js/main.js"></script>
+    
 
     <script>
+        function showSuccessModal(name) {
+            const titleEl = document.getElementById('modalTitle');
+            if (name && name.trim()) {
+                titleEl.textContent = `Thank you, ${name.trim()}!`;
+            } else {
+                titleEl.textContent = 'Thank you!';
+            }
+            const modal = document.getElementById('successModal');
+            modal.classList.add('active');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSuccessModal() {
+            const modal = document.getElementById('successModal');
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        // Close on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeSuccessModal();
+            }
+        });
+
+        // Close on clicking backdrop outside modal card
+        document.getElementById('successModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeSuccessModal();
+            }
+        });
+
         document.getElementById('contactForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             const submitBtn = this.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerText;
             submitBtn.innerText = 'Sending...';
             submitBtn.disabled = true;
+
+            const respondentName = (document.getElementById('name').value || '').trim();
 
             const formData = new FormData(this);
             const object = Object.fromEntries(formData);
@@ -278,7 +428,7 @@
                 
                 const result = await response.json();
                 if (response.status === 200 && result.success) {
-                    alert('Thank you! Your enquiry has been sent successfully. We will be in touch shortly.');
+                    showSuccessModal(respondentName);
                     this.reset();
                 } else {
                     alert(result.message || 'Something went wrong. Please try again.');
@@ -291,5 +441,22 @@
             }
         });
     </script>
+
+    
+<!-- Success Modal Popup -->
+    <div id="successModal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-card">
+            <button type="button" class="modal-x-btn" aria-label="Close" onclick="closeSuccessModal()">&times;</button>
+            <div class="modal-icon-wrapper">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+            <h3 id="modalTitle" class="modal-title">Thank you!</h3>
+            <p class="modal-message">Your enquiry has been sent successfully. We will be in touch shortly.</p>
+            <button type="button" class="modal-close-btn" onclick="closeSuccessModal()">Close</button>
+        </div>
+    </div>
+
 </body>
 </html>
