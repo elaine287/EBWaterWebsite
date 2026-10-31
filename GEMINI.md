@@ -51,6 +51,11 @@ EBWWebsite/
 ├── server.js           # Express backend (local dev server & Nodemailer fallback)
 ├── robots.txt          # SEO crawler rules
 ├── sitemap.xml         # XML sitemap
+├── favicon.ico         # Multi-size (16/32/48px) favicon for Google Search & browsers
+├── favicon-48x48.png   # 48x48 PNG favicon (Google Search standard)
+├── favicon-96x96.png   # 96x96 PNG favicon
+├── favicon-192x192.png # 192x192 high-DPI PNG favicon
+├── apple-touch-icon.png # 180x180 Apple touch icon
 │
 ├── index.html          # LIVE public homepage
 ├── dev-index.html      # Staging / reference copy of homepage
@@ -66,6 +71,7 @@ EBWWebsite/
 │   └── main.js         # Core site JS: navigation, scroll reveals, sticky header
 │
 └── assets/
+    ├── og.png          # 1200x630 centered Open Graph social preview image
     ├── icons/
     │   └── logo.svg    # Vector droplet logo
     ├── images/

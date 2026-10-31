@@ -57,6 +57,11 @@ C:\Users\Elaine\EBWWebsite\
 ├── sitemap.xml                        # Search Engine Optimization sitemap
 ├── LogoMain.jpg                       # High-resolution full landscape brand logo
 ├── LogoMainNoText.jpg                 # Water droplet icon logo (header & footer)
+├── favicon.ico                        # Multi-size (16x16, 32x32, 48x48) favicon for Google Search & browsers
+├── favicon-48x48.png                  # 48x48 square transparent PNG favicon (Google Search standard)
+├── favicon-96x96.png                  # 96x96 square transparent PNG favicon
+├── favicon-192x192.png                # 192x192 high-DPI square transparent PNG favicon
+├── apple-touch-icon.png               # 180x180 iOS/Safari home screen icon
 ├── index.html                         # LIVE public homepage
 ├── dev-index.html                     # Full homepage development/staging copy
 ├── about.html                         # About EBWater (Elaine Baxter biography & 2x2 experience grid)
@@ -64,6 +69,7 @@ C:\Users\Elaine\EBWWebsite\
 ├── contact.html                       # General contact page & Web3Forms enquiry form with modal popup
 ├── consultation.html                  # Immediate redirect (meta refresh) to contact.html
 ├── assets/
+│   ├── og.png                         # 1200x630 centered Open Graph social preview image
 │   ├── icons/
 │   │   └── logo.svg                   # Vector droplet logo
 │   └── images/
