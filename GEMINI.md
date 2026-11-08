@@ -58,8 +58,7 @@ EBWWebsite/
 ├── apple-touch-icon.png # 180x180 Apple touch icon
 │
 ├── index.html          # LIVE public homepage
-├── dev-index.html      # Staging / reference copy of homepage
-├── about.html          # About EBWater (biography, values, 2x2 experience grid)
+├── about.html          # About EBWater (biography, values, 5-box experience grid)
 ├── services.html       # Services listing & independence statement
 ├── contact.html        # Contact page with Web3Forms enquiry form & success modal
 ├── consultation.html   # Immediate redirect (meta refresh) to contact.html

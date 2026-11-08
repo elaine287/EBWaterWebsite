@@ -128,7 +128,8 @@ p {
     color: var(--color-teal);
 }
 
-.btn {
+.btn,
+.nav-links a.btn {
     display: inline-block;
     background-color: var(--color-teal);
     color: var(--color-white);
@@ -141,7 +142,8 @@ p {
     transition: var(--transition-standard);
 }
 
-.btn:hover {
+.btn:hover,
+.nav-links a.btn:hover {
     background-color: var(--color-navy);
     color: var(--color-white);
     transform: translateY(-2px);
