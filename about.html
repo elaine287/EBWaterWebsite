@@ -34,7 +34,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=3.0?v=2.0">
+    <style>
+        .about-intro-showcase { display: flex; align-items: center; gap: var(--spacing-lg); margin-bottom: var(--spacing-lg); }
+        .about-portrait-col { flex: 0 0 340px; max-width: 360px; width: 100%; }
+        .about-portrait-frame { background: var(--color-white); padding: 14px; border-radius: 18px; border: 1px solid var(--color-neutral-2); box-shadow: 0 12px 35px rgba(26, 58, 90, 0.09), 0 2px 6px rgba(26, 58, 90, 0.04); }
+        .about-portrait-wrapper { position: relative; border-radius: 10px; overflow: hidden; background: #ffffff; line-height: 0; }
+        .about-portrait-img { width: 100%; max-width: 340px; height: auto; display: block; border-radius: 10px; -webkit-mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, #000000 65%, rgba(0, 0, 0, 0.5) 85%, transparent 100%); mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, #000000 65%, rgba(0, 0, 0, 0.5) 85%, transparent 100%); }
+        .about-portrait-wrapper::after { content: ''; position: absolute; inset: 0; pointer-events: none; border-radius: 10px; box-shadow: inset 0 0 28px 12px #FFFFFF; }
+        .about-lead-p { font-size: 1.25rem; font-weight: 600; color: var(--color-navy); line-height: 1.65; margin-bottom: var(--spacing-sm); }
+        .about-body-p { font-size: 1.05rem; color: var(--color-text-light); line-height: 1.75; margin-bottom: 0; }
+        .about-cards-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-md); }
+        .about-card-full { grid-column: 1 / -1; }
+        .qual-affil-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: var(--spacing-lg); margin-top: 0.75rem; }
+        .qual-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem; }
+        .qual-item { display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.92rem; line-height: 1.45; }
+        .qual-year { display: inline-block; padding: 0.15rem 0.55rem; background-color: var(--color-bg-light); color: var(--color-teal); font-weight: 700; font-size: 0.8rem; border-radius: 6px; border: 1px solid rgba(0, 112, 128, 0.15); flex-shrink: 0; margin-top: 0.1rem; }
+        .qual-details { display: flex; flex-direction: column; }
+        .qual-name { font-weight: 600; color: var(--color-navy); }
+        .qual-org { color: var(--color-text-light); font-size: 0.85rem; }
+        .about-card-list { list-style: none; padding: 0; margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem; }
+        .about-card-list li { position: relative; padding-left: 1.5rem; color: var(--color-text-light); font-size: 0.95rem; line-height: 1.55; margin-bottom: 0; }
+        .about-card-list li::before { content: ''; position: absolute; left: 0; top: 0.55rem; width: 6px; height: 6px; border-radius: 50%; background-color: var(--color-teal); }
+        @media (max-width: 768px) {
+            .about-intro-showcase { flex-direction: column !important; text-align: center; gap: var(--spacing-md) !important; }
+            .about-portrait-col { flex: 0 0 auto !important; width: 100% !important; max-width: 280px !important; margin: 0 auto; }
+            .about-cards-grid { grid-template-columns: 1fr; }
+            .qual-affil-grid { grid-template-columns: 1fr; gap: var(--spacing-md); }
+        }
+    </style>
 </head>
 <body>
 
@@ -74,11 +102,11 @@
         <div class="container">
             
             <!-- Showcase Section: Framed Picture & Overview -->
-            <div class="about-intro-showcase reveal">
-                <div class="about-portrait-col">
-                    <div class="about-portrait-frame">
-                        <div class="about-portrait-wrapper">
-                            <img src="picture.jpg" alt="Elaine Baxter — EBWater" class="about-portrait-img">
+            <div class="about-intro-showcase reveal" style="display: flex; align-items: center; gap: 4rem; margin-bottom: 4rem;">
+                <div class="about-portrait-col" style="flex: 0 0 340px; max-width: 340px; width: 100%;">
+                    <div class="about-portrait-frame" style="background: #ffffff; padding: 14px; border-radius: 18px; border: 1px solid #E7EEEE; box-shadow: 0 12px 35px rgba(26,58,90,0.09);">
+                        <div class="about-portrait-wrapper" style="position: relative; border-radius: 10px; overflow: hidden; background: #ffffff; line-height: 0;">
+                            <img src="picture.jpg" alt="Elaine Baxter — EBWater" class="about-portrait-img" style="width: 100%; max-width: 320px; height: auto; display: block; border-radius: 10px;">
                         </div>
                     </div>
                 </div>

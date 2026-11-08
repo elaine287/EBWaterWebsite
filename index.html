@@ -45,7 +45,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=3.0">
+    <style>
+        .site-header-dynamic .logo-image-slot { position: relative; display: flex; align-items: center; justify-content: center; height: 160px; width: 135px; transition: all 0.35s ease; }
+        .site-header-dynamic .brand-img-full { position: absolute; height: 160px; width: auto; max-height: 160px; opacity: 1; transition: all 0.25s ease; }
+        .site-header-dynamic .brand-img-droplet { position: absolute; height: 60px; width: 60px; max-height: 60px; opacity: 0; pointer-events: none; transition: all 0.25s ease; }
+        .site-header-dynamic.is-shrunk .logo-image-slot { height: 60px !important; width: 60px !important; }
+        .site-header-dynamic.is-shrunk .brand-img-full { opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; }
+        .site-header-dynamic.is-shrunk .brand-img-droplet { opacity: 1 !important; pointer-events: auto !important; }
+        @media (max-width: 768px) {
+            .site-header-dynamic .logo-image-slot { height: 100px !important; width: 84px !important; }
+            .site-header-dynamic .brand-img-full { height: 100px !important; max-height: 100px !important; }
+            .site-header-dynamic.is-shrunk .logo-image-slot { height: 52px !important; width: 52px !important; }
+            .site-header-dynamic.is-shrunk .brand-img-droplet { height: 52px !important; width: 52px !important; }
+        }
+    </style>
 </head>
 <body>
 
@@ -53,9 +67,9 @@
     <header class="site-header site-header-dynamic">
         <div class="header-container">
             <a href="index.html" class="logo">
-                <div class="logo-image-slot">
-                    <img src="LogoMain.jpg" alt="EBWater Full Logo" class="brand-img-full">
-                    <img src="LogoMainNoText.jpg" alt="EBWater Droplet Logo" class="brand-img-droplet">
+                <div class="logo-image-slot" style="position: relative; display: flex; align-items: center; justify-content: center; width: 135px; height: 160px;">
+                    <img src="LogoMain.jpg" alt="EBWater Full Logo" class="brand-img-full" style="height: 160px; width: auto; max-height: 160px; position: absolute; left: 0; top: 0;">
+                    <img src="LogoMainNoText.jpg" alt="EBWater Droplet Logo" class="brand-img-droplet" style="height: 60px; width: 60px; max-height: 60px; position: absolute; left: 0;">
                 </div>
                 <div class="logo-text-wrapper">
                     <span class="logo-title">EBWater</span>
