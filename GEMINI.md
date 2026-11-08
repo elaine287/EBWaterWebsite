@@ -126,7 +126,7 @@ All design tokens are defined in `:root` in `css/styles.css`.
 - 3-column grid structure:
   1. **Brand column**: Droplet logo (styled with subtle 3D bezel shadow for dark contrast), "Healthcare water safety advice" tagline, and key mission statement.
   2. **Navigation column**: Links to Home, About, Services, Contact, and Consultation.
-  3. **Services column**: Biological Risk Audits, Water Safety Plans, Authorising Engineer (AE), Legionella & Pseudomonas Risk Management, Water Safety Governance.
+  3. **Services column**: Matches all 8 services on `services.html` (Water Safety Plans (WSPs), Risk Assessments and Audits, Advice on Sampling and Contamination, Outbreak Investigation Support, Engineering Design Reviews, Water Safety Group (WSG) support, Training and Educating, Implementation of water safety strategies such as water-lite).
 - Bottom sub-bar with copyright notice, Privacy Policy, and Terms links.
 
 ### Pages Summary
@@ -139,12 +139,11 @@ All design tokens are defined in `:root` in `css/styles.css`.
    - Framed portrait of Elaine Baxter (`picture.jpg`) with soft-faded feathered edges alongside introductory lead statement ("complete the picture in healthcare water safety").
    - 5 structured profile cards: Clinical Experience (Box 1), Evidence-Based Approach (Box 2), Professional Qualifications & Affiliations (Box 3 with qualifications timeline & professional memberships), Clinical Leadership (Box 4), and Strategic Governance (Box 5).
 3. **`services.html` (Services)**:
-   - Header banner with strapline *"Independent, evidence-based water safety governance, audits, and Authorising Engineer services on water and wastewater for hospitals and healthcare estates."*
-   - Detailed service grid: Biological Risk Audits, Water Safety Plan (WSP) Development, Authorising Engineer (AE) Services, Legionella Risk Management, Pseudomonas Risk Management, Water Safety Governance, Training & Competency, Policy & Procedure Development.
-   - Explicit Independence Statement card emphasizing total freedom from chemical, equipment, and remedial supply conflicts.
+   - Header banner with strapline *"EBWater provides specialist support to help healthcare organisations manage water-related risk effectively."*
+   - Detailed 8-card service grid: Water Safety Plans (WSPs), Risk Assessments and Audits, Advice on Sampling and Contamination, Outbreak Investigation Support, Engineering Design Reviews, Water Safety Group (WSG) support, Training and Educating, and Implementation of water safety strategies such as water-lite (no bottom Call-to-Action section).
 4. **`contact.html` (Contact & Enquiries)**:
    - Contact details card: Email (`elaine@ebwater.co.uk`), Phone (`07771 784384`), Location (`United Kingdom`).
-   - Interactive contact form sending via Web3Forms with client-side validation and personalized confirmation modal (fields: Name, Organisation, Email, Phone, Role/Position, Premises Type, Message — no 'Nature of Enquiry' dropdown).
+   - Interactive contact form sending via Web3Forms with client-side validation and personalized confirmation modal (fields: Name, Organisation, Email, Phone, Role/Position, Message — no 'Nature of Enquiry' or 'Premises Type' fields).
 5. **`consultation.html`**:
    - Meta-refresh redirect pointing directly to `contact.html`.
 
