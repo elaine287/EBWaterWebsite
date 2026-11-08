@@ -132,10 +132,9 @@ All design tokens are defined in `:root` in `css/styles.css`.
 ### Pages Summary
 1. **`index.html` (Homepage)**:
    - Dynamic sticky header: displays full 160px logo with readable text at page top alongside "EBWater / Healthcare water safety advice"; smoothly morphs on scroll into compact droplet logo and text.
-   - Hero banner with headline *"Water safety governance and compliance for healthcare premises."*, strapline, dual CTA buttons ("Explore Services", "Request a Consultation"), and landscape brand visual.
-   - Overlapping service preview cards (Biological Risk Audits, Water Safety Plans, Authorising Engineer).
-   - Introduction to independent water safety governance.
-   - Core value proposition grid (Healthcare Specialism, Authorising Engineer Services, Independent Governance, End-to-End Support).
+   - Hero banner with headline *"Water safety governance and compliance for healthcare premises."*, strapline, dual CTA buttons, and executive clinical assurance card (replaces duplicate hero logo).
+   - Independent Water Safety Governance section with 3 core service cards (Biological Risk Audits, Water Safety Plans, Authorising Engineer).
+   - "Why Choose EBWater" value proposition grid (Clinical Leadership, 100% Independent).
 2. **`about.html` (About)**:
    - Header with strapline *"Specialist water safety governance led by 25+ years of microbiology and healthcare estates experience."*
    - Framed portrait of Elaine Baxter with soft-faded feathered edges alongside introductory lead statement ("complete the picture in healthcare water safety").
