@@ -131,11 +131,12 @@ All design tokens are defined in `:root` in `css/styles.css`.
 
 ### Pages Summary
 1. **`index.html` (Homepage)**:
-   - Dynamic sticky header: displays full 160px logo with readable text at page top alongside "EBWater / Healthcare water safety advice"; smoothly morphs on scroll into compact droplet logo and text.
-   - Hero banner with headline *"Water safety governance and compliance for healthcare premises."*, strapline, dual CTA buttons, and landscape brand visual.
+   - Intentionally concise layout consisting ONLY of the Header, Hero section, and Footer (do not add extra body sections below the hero unless explicitly requested).
+   - Dynamic sticky header: displays full 160px logo (`LogoMain.jpg`) with readable text at page top alongside "EBWater / Healthcare water safety advice"; smoothly morphs on scroll into compact droplet logo (`LogoMainNoText.jpg`) and text.
+   - Hero banner with headline *"INDEPENDENT WATER SAFETY ADVICE FOR HEALTHCARE PREMISES."*, strapline, dual CTA buttons, and main brand logo (`LogoMain.jpg`).
 2. **`about.html` (About)**:
-   - Header with strapline *"Specialist water safety governance led by 25+ years of microbiology and healthcare estates experience."*
-   - Framed portrait of Elaine Baxter with soft-faded feathered edges alongside introductory lead statement ("complete the picture in healthcare water safety").
+   - Header with strapline *"EBWater provides independent water safety advice, supporting healthcare organisations in understanding, managing and governing water-related risks."*
+   - Framed portrait of Elaine Baxter (`picture.jpg`) with soft-faded feathered edges alongside introductory lead statement ("complete the picture in healthcare water safety").
    - 5 structured profile cards: Clinical Experience (Box 1), Evidence-Based Approach (Box 2), Professional Qualifications & Affiliations (Box 3 with qualifications timeline & professional memberships), Clinical Leadership (Box 4), and Strategic Governance (Box 5).
 3. **`services.html` (Services)**:
    - Header banner with strapline *"Independent, evidence-based water safety governance, audits, and Authorising Engineer services on water and wastewater for hospitals and healthcare estates."*
@@ -143,9 +144,23 @@ All design tokens are defined in `:root` in `css/styles.css`.
    - Explicit Independence Statement card emphasizing total freedom from chemical, equipment, and remedial supply conflicts.
 4. **`contact.html` (Contact & Enquiries)**:
    - Contact details card: Email (`elaine@ebwater.co.uk`), Phone (`07771 784384`), Location (`United Kingdom`).
-   - Interactive contact form sending via Web3Forms with client-side validation and personalized confirmation modal.
+   - Interactive contact form sending via Web3Forms with client-side validation and personalized confirmation modal (fields: Name, Organisation, Email, Phone, Role/Position, Premises Type, Message — no 'Nature of Enquiry' dropdown).
 5. **`consultation.html`**:
    - Meta-refresh redirect pointing directly to `contact.html`.
+
+---
+
+## Mandatory Rules for Future Updates & AI Sessions
+
+1. **Strict Scope Control (No Unrequested Content)**:
+   - NEVER add, restore, or remove sections, cards, or text on any page that the user did not explicitly ask to change.
+   - Specifically, `index.html` is intentionally designed with ONLY the Header, Hero section, and Footer. Never add body sections below the hero unless instructed.
+2. **Cache-Busting on Every CSS / JS Change**:
+   - Whenever `css/styles.css` or `js/main.js` is modified, ALWAYS increment the version query string across the HTML files (e.g., `css/styles.css?v=3.1`, `js/main.js?v=3.1`) so browsers and GitHub Pages CDN immediately load the updated files without stale cache bugs.
+3. **Defensive Image Sizing**:
+   - Whenever adding a new high-resolution image or logo, ALWAYS include explicit inline `max-width` / `max-height` constraints or critical `<head>` styles so the image can never blow up to its raw camera resolution if external CSS is slow or cached.
+4. **Local Preview & Diff Verification Before Pushing**:
+   - Always preview changes on the local server (`python -m http.server 3000` at `http://localhost:3000`) and verify `git status` / `git diff` to confirm only the intended files and lines were modified before committing and pushing to `main`.
 
 ---
 
