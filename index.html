@@ -153,7 +153,23 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=3.0"></script>
+    <script>
+        (function() {
+            var header = document.querySelector('.site-header-dynamic');
+            if (header) {
+                var onScroll = function() {
+                    if (window.scrollY > 40) {
+                        header.classList.add('is-shrunk');
+                    } else {
+                        header.classList.remove('is-shrunk');
+                    }
+                };
+                window.addEventListener('scroll', onScroll, { passive: true });
+                onScroll();
+            }
+        })();
+    </script>
 </body>
 </html>
 
