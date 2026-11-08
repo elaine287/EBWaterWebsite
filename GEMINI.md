@@ -75,8 +75,9 @@ EBWWebsite/
     ├── icons/
     │   └── logo.svg    # Vector droplet logo
     ├── images/
-    ├── LogoMain.jpg    # Full landscape brand logo with wordmark
-    └── LogoMainNoText.jpg # Water droplet icon (used in header & footer with 3D bezel effect)
+├── LogoMain.jpg        # Full landscape brand logo with wordmark
+├── LogoMainNoText.jpg  # Water droplet icon (used in header & footer with 3D bezel effect)
+├── picture.jpg         # Portrait photo of Elaine Baxter in framed fade on about.html
 ```
 
 ---
@@ -130,15 +131,15 @@ All design tokens are defined in `:root` in `css/styles.css`.
 
 ### Pages Summary
 1. **`index.html` (Homepage)**:
+   - Dynamic sticky header: displays full 160px logo with readable text at page top alongside "EBWater / Healthcare water safety advice"; smoothly morphs on scroll into compact droplet logo and text.
    - Hero banner with headline *"Water safety governance and compliance for healthcare premises."*, strapline, dual CTA buttons ("Explore Services", "Request a Consultation"), and landscape brand visual.
    - Overlapping service preview cards (Biological Risk Audits, Water Safety Plans, Authorising Engineer).
    - Introduction to independent water safety governance.
    - Core value proposition grid (Healthcare Specialism, Authorising Engineer Services, Independent Governance, End-to-End Support).
 2. **`about.html` (About)**:
    - Header with strapline *"Specialist water safety governance led by 25+ years of microbiology and healthcare estates experience."*
-   - Elaine Baxter biography and credential overview.
-   - Core values (Independence, Evidence, Clarity, Safety, Accountability, Partnership).
-   - 2x2 grid highlighting Strategic Governance & Water Safety Groups, Key Experience Areas, Independent Auditing & Risk Assessment, and Policy, Training & Competency.
+   - Framed portrait of Elaine Baxter with soft-faded feathered edges alongside introductory lead statement ("complete the picture in healthcare water safety").
+   - 5 structured profile cards: Clinical Experience (Box 1), Evidence-Based Approach (Box 2), Professional Qualifications & Affiliations (Box 3 with qualifications timeline & professional memberships), Clinical Leadership (Box 4), and Strategic Governance (Box 5).
 3. **`services.html` (Services)**:
    - Header banner with strapline *"Independent, evidence-based water safety governance, audits, and Authorising Engineer services on water and wastewater for hospitals and healthcare estates."*
    - Detailed service grid: Biological Risk Audits, Water Safety Plan (WSP) Development, Authorising Engineer (AE) Services, Legionella Risk Management, Pseudomonas Risk Management, Water Safety Governance, Training & Competency, Policy & Procedure Development.

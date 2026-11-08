@@ -31,14 +31,23 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Header Scroll Effect
     const header = document.querySelector('.site-header');
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.style.padding = '0.5rem 0';
-            header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
-        } else {
-            header.style.padding = '0';
-            header.style.boxShadow = '0 1px 10px rgba(0,0,0,0.05)';
-        }
-    });
+    if (header) {
+        const updateHeaderOnScroll = () => {
+            if (window.scrollY > 40) {
+                header.classList.add('is-shrunk');
+                if (!header.classList.contains('site-header-dynamic')) {
+                    header.style.padding = '0.5rem 0';
+                    header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+                }
+            } else {
+                header.classList.remove('is-shrunk');
+                if (!header.classList.contains('site-header-dynamic')) {
+                    header.style.padding = '0';
+                    header.style.boxShadow = '0 1px 10px rgba(0,0,0,0.05)';
+                }
+            }
+        };
+        window.addEventListener('scroll', updateHeaderOnScroll);
+        updateHeaderOnScroll();
+    }
 });
